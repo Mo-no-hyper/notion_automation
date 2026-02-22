@@ -65,7 +65,7 @@ def log_to_notion(database_id, message, status="Info"):
             properties={
                 "Timestamp": {"date": {"start": timestamp}},
                 "Log Message": {"title": [{"text": {"content": message}}]},
-                "Status": {"text": {"select": {"name":status}}},
+                "Status": {"select": {"name":status}},
             },
         )
         logging.info(f"Logged message to Notion: {message}")

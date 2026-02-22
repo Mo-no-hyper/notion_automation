@@ -4,7 +4,7 @@ on:
   schedule:
     # Run every Saturday at 23:59
     - cron: "59 23 * * 6"
-    workflow_dispatch:
+  workflow_dispatch:
     
 
 jobs:

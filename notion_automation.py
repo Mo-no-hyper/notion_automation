@@ -56,7 +56,7 @@ def delete_task(task):
         log_to_notion(LOGS_DATABASE_ID, f"Error processing task ID: {task['id']}", status="Error")
         return False  # Task was not deleted due to an error
 
-def log_to_notion(database_id, message):
+def log_to_notion(database_id, message, status):
     """ Log a message to the Notion logs database."""
     try:
         timestamp = datetime.now(timezone.utc).isoformat()
